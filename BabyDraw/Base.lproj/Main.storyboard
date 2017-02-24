@@ -1,26 +1,68 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="upheavtt.ttf">
+            <string>UpheavalTT-BRK-</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BabyDraw" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3qD-C1-ssL">
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLc-ce-nNC">
+                                <rect key="frame" x="0.0" y="629" width="414" height="107"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="UpheavalTT-BRK-" family="Upheaval TT (BRK)" pointSize="80"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Btb-Xe-ubz"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="rLc-ce-nNC" secondAttribute="trailing" constant="-20" id="4i6-rm-prO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rLc-ce-nNC" secondAttribute="bottom" id="JmY-W0-phi"/>
+                            <constraint firstItem="rLc-ce-nNC" firstAttribute="height" secondItem="3qD-C1-ssL" secondAttribute="height" multiplier="0.15" id="U0F-lj-3Mu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3qD-C1-ssL" secondAttribute="bottom" id="Vah-3w-Ej6"/>
+                            <constraint firstItem="3qD-C1-ssL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WG0-ge-zIg"/>
+                            <constraint firstItem="rLc-ce-nNC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="tXZ-6V-cQb"/>
+                            <constraint firstAttribute="trailing" secondItem="3qD-C1-ssL" secondAttribute="trailing" id="u9A-Oe-eMi"/>
+                            <constraint firstItem="3qD-C1-ssL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="uav-K4-kKi"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="3qD-C1-ssL" id="kxy-vB-BaX"/>
+                        <outlet property="reset" destination="rLc-ce-nNC" id="6hb-qX-NnC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="115.94202898550725" y="121.46739130434784"/>
         </scene>
     </scenes>
 </document>

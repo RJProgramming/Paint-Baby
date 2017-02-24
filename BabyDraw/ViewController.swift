@@ -7,19 +7,96 @@
 //
 
 import UIKit
+import Foundation
 
 class ViewController: UIViewController {
+    
+    var lastPoint = CGPoint.zero
+    var red: CGFloat = 0
+    var green: CGFloat = 0
+    var blue: CGFloat = 0
+    var brushWidth: CGFloat = 100.0
+    var opacity: CGFloat = 1.0
+    var swiped = false
 
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var reset: UIButton!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        
+        
+        reset.titleLabel!.font =  UIFont(name: "Upheaval TT (brk)", size: 80)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        swiped = false
+        
+        red = randomCGFloat(min: 0, max: 1)
+        green = randomCGFloat(min: 0, max: 1)
+        blue = randomCGFloat(min: 0, max: 1)
+        
+        print("red: \(red)")
+        print("green: \(green)")
+        print("blue: \(blue)")
+        
+        if let touch = touches.first {
+            lastPoint = touch.location(in: self.view)
+            
+        }
     }
-
+    
+    func drawLineFrom(from fromPoint: CGPoint, to toPoint: CGPoint) {
+        UIGraphicsBeginImageContextWithOptions(view.bounds.size, false, 0)
+        
+        imageView.image?.draw(in: view.bounds)
+        
+        let context = UIGraphicsGetCurrentContext()
+        
+        context?.move(to: fromPoint)
+        context?.addLine(to: toPoint)
+        
+        context?.setLineCap(CGLineCap.round)
+        context?.setLineWidth(brushWidth)
+        context?.setStrokeColor(red: red, green: green, blue: blue, alpha: 1.0)
+        context?.setBlendMode(CGBlendMode.normal)
+        context?.strokePath()
+        
+        imageView.image = UIGraphicsGetImageFromCurrentImageContext()
+        imageView.alpha = opacity
+        UIGraphicsEndImageContext()
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        swiped = true
+        if let touch = touches.first {
+            let currentPoint = touch.location(in: view)
+            drawLineFrom(from: lastPoint, to: currentPoint)
+            
+            lastPoint = currentPoint
+        }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if !swiped {
+            // draw a single point
+            self.drawLineFrom(from: lastPoint, to: lastPoint)
+        }
+    }
+    
+    func randomCGFloat(min: CGFloat, max: CGFloat) -> CGFloat {
+        return CGFloat(Float(arc4random()) / Float(UINT32_MAX)) * (max - min) + min
+    }
+    
+    @IBAction func reset(_ sender: Any) {
+        imageView.image = nil
+    }
+    
 
 }
 
