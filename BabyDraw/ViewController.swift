@@ -40,12 +40,15 @@ class ViewController: UIViewController {
             
         }else if screenWidth == Constants.iPhone6Width{
            
-            reset.titleLabel!.font =  UIFont(name: "Upheaval TT (brk)", size: 80)
+            reset.titleLabel!.font =  UIFont(name: "Upheaval TT (brk)", size: 75)
             
         }else if screenWidth >= Constants.iPhone6PlusWidth{
             
             reset.titleLabel!.font =  UIFont(name: "Upheaval TT (brk)", size: 80)
             
+        }else if screenWidth >= Constants.ipadWidth{
+            
+            reset.titleLabel!.font =  UIFont(name: "Upheaval TT (brk)", size: 150)
         }
 
         
@@ -57,6 +60,7 @@ class ViewController: UIViewController {
         static let iPhone6PlusWidth = CGFloat(414)
         static let iPhoneElseWidth = CGFloat(320)
         static let iPhone4Height = CGFloat(480)
+        static let ipadWidth = CGFloat(1024)
         
     }
 
