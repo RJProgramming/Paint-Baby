@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     var brushWidth: CGFloat = 100.0
     var opacity: CGFloat = 1.0
     var swiped = false
+    
+    let screenSize: CGRect = UIScreen.main.bounds
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var reset: UIButton!
@@ -28,10 +30,34 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let screenWidth = screenSize.width
+        //let screenHeight = screenSize.height
         
         
+        if screenWidth == Constants.iPhoneElseWidth{
+           
+           reset.titleLabel!.font =  UIFont(name: "Upheaval TT (brk)", size: 60)
+            
+        }else if screenWidth == Constants.iPhone6Width{
+           
+            reset.titleLabel!.font =  UIFont(name: "Upheaval TT (brk)", size: 80)
+            
+        }else if screenWidth >= Constants.iPhone6PlusWidth{
+            
+            reset.titleLabel!.font =  UIFont(name: "Upheaval TT (brk)", size: 80)
+            
+        }
+
         
-        reset.titleLabel!.font =  UIFont(name: "Upheaval TT (brk)", size: 80)
+    }
+    
+    struct Constants {
+        
+        static let iPhone6Width = CGFloat(375)
+        static let iPhone6PlusWidth = CGFloat(414)
+        static let iPhoneElseWidth = CGFloat(320)
+        static let iPhone4Height = CGFloat(480)
+        
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
