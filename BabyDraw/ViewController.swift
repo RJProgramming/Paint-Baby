@@ -92,7 +92,9 @@ class ViewController: UIViewController {
         //Set the controls to the default values.
         fxSwitch.isOn = defaults.bool(forKey: "soundFx")
         
-        if !fxSwitch.isOn {
+        if fxSwitch.isOn {
+            settingsChecker = 0
+        }else{
             settingsChecker = 1
         }
         
