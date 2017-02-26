@@ -42,12 +42,17 @@
                                     <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Btb-Xe-ubz"/>
                                 </connections>
                             </button>
+                            <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="enK-TC-JP5">
+                                <rect key="frame" x="360" y="496.5" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="enK-TC-JP5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="24l-68-JaY"/>
                             <constraint firstItem="rLc-ce-nNC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2xI-cQ-0i6"/>
                             <constraint firstItem="rLc-ce-nNC" firstAttribute="width" secondItem="3qD-C1-ssL" secondAttribute="width" multiplier="0.6" id="7SK-Fr-HGO"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rLc-ce-nNC" secondAttribute="bottom" constant="20" id="JmY-W0-phi"/>
+                            <constraint firstItem="enK-TC-JP5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qzl-C2-0oW"/>
                             <constraint firstItem="rLc-ce-nNC" firstAttribute="height" secondItem="3qD-C1-ssL" secondAttribute="height" multiplier="0.1" id="U0F-lj-3Mu"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3qD-C1-ssL" secondAttribute="bottom" id="Vah-3w-Ej6"/>
                             <constraint firstItem="3qD-C1-ssL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WG0-ge-zIg"/>
@@ -56,6 +61,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="fxSwitch" destination="enK-TC-JP5" id="dqt-Af-KZ6"/>
                         <outlet property="imageView" destination="3qD-C1-ssL" id="kxy-vB-BaX"/>
                         <outlet property="reset" destination="rLc-ce-nNC" id="6hb-qX-NnC"/>
                     </connections>

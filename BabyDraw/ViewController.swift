@@ -22,14 +22,21 @@ class ViewController: UIViewController {
     var clearCounter = 0
     var springSound: AVAudioPlayer!
     var sound: AVAudioPlayer!
+    var settingsChecker = 0
     
     let screenSize: CGRect = UIScreen.main.bounds
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var reset: UIButton!
+    @IBOutlet weak var fxSwitch: UISwitch!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //settings button for sound FX
+        registerSettingsBundle()
+        updateDisplayFromDefaults()
         
         let screenWidth = screenSize.width
         //let screenHeight = screenSize.height
@@ -69,6 +76,26 @@ class ViewController: UIViewController {
             reset.titleLabel!.font =  UIFont(name: "Marker Comp", size: 80)
         }
 
+        
+    }
+    
+    //settings bundle
+    func registerSettingsBundle(){
+        let appDefaults = [String:AnyObject]()
+        UserDefaults.standard.register(defaults: appDefaults)
+    }
+    //settings bundle
+    func updateDisplayFromDefaults(){
+        //Get the defaults
+        let defaults = UserDefaults.standard
+        
+        //Set the controls to the default values.
+        fxSwitch.isOn = defaults.bool(forKey: "soundFx")
+        
+        if !fxSwitch.isOn {
+            settingsChecker = 1
+        }
+        
         
     }
     
@@ -152,7 +179,10 @@ class ViewController: UIViewController {
     
     @IBAction func reset(_ sender: Any) {
         
-       sound.play()
+        if settingsChecker == 0 {
+           sound.play()
+        }
+       
        imageView.image = nil
     }
     
