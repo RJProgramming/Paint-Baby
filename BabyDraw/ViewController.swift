@@ -21,14 +21,12 @@ class ViewController: UIViewController {
     var swiped = false
     var clearCounter = 0
     var springSound: AVAudioPlayer!
+    var sound: AVAudioPlayer!
     
     let screenSize: CGRect = UIScreen.main.bounds
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var reset: UIButton!
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +34,18 @@ class ViewController: UIViewController {
         let screenWidth = screenSize.width
         //let screenHeight = screenSize.height
         
-        //reset.contentEdgeInsets = UIEdgeInsetsMake(-5.0, 0.0, 0.0, 0.0)
+        //load sound effect, and prepare to play it on check so it doesnt lag on intial button press.
+        let path = Bundle.main.path(forResource: "spring.wav", ofType:nil)!
+        let url = URL(fileURLWithPath: path)
+        
+        do {
+            sound = try AVAudioPlayer(contentsOf: url)
+            springSound = sound
+            sound?.prepareToPlay()
+        } catch {
+            // couldn't load file :(
+        }
+        
         reset.layer.cornerRadius = 4
         reset.layer.shadowOpacity = 1
         reset.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
@@ -45,19 +54,19 @@ class ViewController: UIViewController {
         
         if screenWidth == Constants.iPhoneElseWidth{
            
-           reset.titleLabel!.font =  UIFont(name: "Upheaval TT (brk)", size: 60)
+           reset.titleLabel!.font =  UIFont(name: "Marker Comp", size: 30)
             
         }else if screenWidth == Constants.iPhone6Width{
            
-            reset.titleLabel!.font =  UIFont(name: "Upheaval TT (brk)", size: 75)
+            reset.titleLabel!.font =  UIFont(name: "Marker Comp", size: 40)
             
         }else if screenWidth >= Constants.iPhone6PlusWidth{
             
-            reset.titleLabel!.font =  UIFont(name: "Upheaval TT (brk)", size: 80)
+            reset.titleLabel!.font =  UIFont(name: "Marker Comp", size: 50)
             
         }else if screenWidth >= Constants.ipadWidth{
             
-            reset.titleLabel!.font =  UIFont(name: "Upheaval TT (brk)", size: 150)
+            reset.titleLabel!.font =  UIFont(name: "Marker Comp", size: 80)
         }
 
         
@@ -143,20 +152,8 @@ class ViewController: UIViewController {
     
     @IBAction func reset(_ sender: Any) {
         
-        
-        //play spring sound effect
-        let path = Bundle.main.path(forResource: "spring.wav", ofType:nil)!
-        let url = URL(fileURLWithPath: path)
-        
-        do {
-            let sound = try AVAudioPlayer(contentsOf: url)
-            springSound = sound
-            sound.play()
-        } catch {
-            // couldn't load file :(
-        }
-        
-        imageView.image = nil
+       sound.play()
+       imageView.image = nil
     }
     
 
