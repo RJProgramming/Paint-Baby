@@ -36,6 +36,12 @@ class ViewController: UIViewController {
         let screenWidth = screenSize.width
         //let screenHeight = screenSize.height
         
+        //reset.contentEdgeInsets = UIEdgeInsetsMake(-5.0, 0.0, 0.0, 0.0)
+        reset.layer.cornerRadius = 4
+        reset.layer.shadowOpacity = 1
+        reset.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        reset.layer.shadowRadius = 0
+        reset.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
         
         if screenWidth == Constants.iPhoneElseWidth{
            
@@ -136,6 +142,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func reset(_ sender: Any) {
+        
         
         //play spring sound effect
         let path = Bundle.main.path(forResource: "spring.wav", ofType:nil)!
