@@ -45,6 +45,7 @@ class ViewController: UIViewController {
         let path = Bundle.main.path(forResource: "spring.wav", ofType:nil)!
         let url = URL(fileURLWithPath: path)
         
+        
         do {
             sound = try AVAudioPlayer(contentsOf: url)
             springSound = sound
@@ -183,6 +184,7 @@ class ViewController: UIViewController {
         
         if settingsChecker == 0 {
            sound.play()
+            sound.volume = 0.3
         }
        
        imageView.image = nil
