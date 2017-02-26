@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -19,6 +20,7 @@ class ViewController: UIViewController {
     var opacity: CGFloat = 1.0
     var swiped = false
     var clearCounter = 0
+    var springSound: AVAudioPlayer!
     
     let screenSize: CGRect = UIScreen.main.bounds
 
@@ -76,8 +78,6 @@ class ViewController: UIViewController {
         print("green: \(green)")
         print("blue: \(blue)")
         
-        
-        
         if let touch = touches.first {
             lastPoint = touch.location(in: self.view)
             
@@ -103,9 +103,10 @@ class ViewController: UIViewController {
         imageView.image = UIGraphicsGetImageFromCurrentImageContext()
         imageView.alpha = opacity
         
+        //clears screen after a number of points
         clearCounter += 1
         
-        if clearCounter > 20 {
+        if clearCounter > 500 {
             imageView.image = nil
             clearCounter = 0
         }
@@ -135,6 +136,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func reset(_ sender: Any) {
+        
+        //play spring sound effect
+        let path = Bundle.main.path(forResource: "spring.wav", ofType:nil)!
+        let url = URL(fileURLWithPath: path)
+        
+        do {
+            let sound = try AVAudioPlayer(contentsOf: url)
+            springSound = sound
+            sound.play()
+        } catch {
+            // couldn't load file :(
+        }
+        
         imageView.image = nil
     }
     
