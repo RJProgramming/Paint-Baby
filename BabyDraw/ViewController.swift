@@ -77,7 +77,12 @@ class ViewController: UIViewController {
             reset.titleLabel!.font =  UIFont(name: "Marker Comp", size: 80)
         }
 
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.defaultsChanged), name: UserDefaults.didChangeNotification,object: nil)
         
+    }
+    
+    func defaultsChanged(){
+        updateDisplayFromDefaults()
     }
     
     //settings bundle
@@ -184,7 +189,7 @@ class ViewController: UIViewController {
         
         if settingsChecker == 0 {
            sound.play()
-            sound.volume = 0.3
+           sound.volume = 0.4
         }
        
        imageView.image = nil

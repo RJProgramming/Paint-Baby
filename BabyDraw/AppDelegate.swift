@@ -16,6 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // need this to load default initial settings switch as "on" even though it starts as "on" already for first time app is installed
+        UserDefaults.standard.register(defaults: ["soundFx" : true])
+        UserDefaults.standard.bool(forKey: "soundFx")
+        UserDefaults.standard.set(true, forKey: "soundFx")
         return true
     }
 
