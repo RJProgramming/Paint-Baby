@@ -62,19 +62,19 @@ class ViewController: UIViewController {
         
         if screenWidth == Constants.iPhoneElseWidth{
            
-           reset.titleLabel!.font =  UIFont(name: "Marker Comp", size: 30)
+           reset.titleLabel!.font =  UIFont(name: "Marker Comp", size: 25)
             
         }else if screenWidth == Constants.iPhone6Width{
            
-            reset.titleLabel!.font =  UIFont(name: "Marker Comp", size: 40)
+            reset.titleLabel!.font =  UIFont(name: "Marker Comp", size: 34)
             
         }else if screenWidth >= Constants.iPhone6PlusWidth{
             
-            reset.titleLabel!.font =  UIFont(name: "Marker Comp", size: 50)
+            reset.titleLabel!.font =  UIFont(name: "Marker Comp", size: 39)
             
         }else if screenWidth >= Constants.ipadWidth{
             
-            reset.titleLabel!.font =  UIFont(name: "Marker Comp", size: 80)
+            reset.titleLabel!.font =  UIFont(name: "Marker Comp", size: 50)
         }
 
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.defaultsChanged), name: UserDefaults.didChangeNotification,object: nil)
