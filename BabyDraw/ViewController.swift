@@ -29,6 +29,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var reset: UIButton!
     @IBOutlet weak var fxSwitch: UISwitch!
+    @IBOutlet weak var sa1: UIButton!
+    @IBOutlet weak var sa2: UIButton!
+    
     
     
     override func viewDidLoad() {
@@ -62,11 +65,11 @@ class ViewController: UIViewController {
         
         if screenWidth == Constants.iPhoneElseWidth{
            
-           reset.titleLabel!.font =  UIFont(name: "Marker Comp", size: 25)
+           reset.titleLabel!.font =  UIFont(name: "Marker Comp", size: 30)
             
         }else if screenWidth == Constants.iPhone6Width{
            
-            reset.titleLabel!.font =  UIFont(name: "Marker Comp", size: 34)
+            reset.titleLabel!.font =  UIFont(name: "Marker Comp", size: 38)
             
         }else if screenWidth >= Constants.iPhone6PlusWidth{
             
@@ -74,7 +77,7 @@ class ViewController: UIViewController {
             
         }else if screenWidth >= Constants.ipadWidth{
             
-            reset.titleLabel!.font =  UIFont(name: "Marker Comp", size: 50)
+            reset.titleLabel!.font =  UIFont(name: "Marker Comp", size: 36)
         }
 
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.defaultsChanged), name: UserDefaults.didChangeNotification,object: nil)
@@ -185,6 +188,19 @@ class ViewController: UIViewController {
         return CGFloat(Float(arc4random()) / Float(UINT32_MAX)) * (max - min) + min
     }
     
+    func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            // we got back an error!
+            let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        } else {
+            let ac = UIAlertController(title: "Saved!", message: "Drawing saved!", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        }
+    }
+    
     @IBAction func reset(_ sender: Any) {
         
         if settingsChecker == 0 {
@@ -194,6 +210,23 @@ class ViewController: UIViewController {
        
        imageView.image = nil
     }
+    
+    @IBAction func vE(_ sender: Any) {
+        
+        if imageView != nil{
+            if sa1.isHighlighted && sa2.isHighlighted {
+                UIImageWriteToSavedPhotosAlbum(imageView.image!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+                
+            }
+        }
+        
+    }
+    
+    
+    @IBAction func sA(_ sender: Any) {
+        
+    }
+    
     
 
 }
