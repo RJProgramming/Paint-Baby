@@ -57,11 +57,12 @@ class ViewController: UIViewController {
             // couldn't load file :(
         }
         
-        reset.layer.cornerRadius = 4
-        reset.layer.shadowOpacity = 1
-        reset.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-        reset.layer.shadowRadius = 0
-        reset.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        imageView.layer.cornerRadius = 4
+        imageView.layer.shadowOpacity = 1
+        imageView.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        imageView.layer.shadowRadius = 0
+        imageView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        
         
         if screenWidth == Constants.iPhoneElseWidth{
            
@@ -213,7 +214,7 @@ class ViewController: UIViewController {
     
     @IBAction func vE(_ sender: Any) {
         
-        if imageView != nil{
+        if imageView.image != nil{
             if sa1.isHighlighted && sa2.isHighlighted {
                 UIImageWriteToSavedPhotosAlbum(imageView.image!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
                 
@@ -224,6 +225,13 @@ class ViewController: UIViewController {
     
     
     @IBAction func sA(_ sender: Any) {
+        
+        if imageView.image != nil{
+            if sa1.isHighlighted && sa2.isHighlighted {
+                UIImageWriteToSavedPhotosAlbum(imageView.image!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+                
+            }
+        }
         
     }
     

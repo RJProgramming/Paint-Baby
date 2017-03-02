@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
+    <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -25,18 +25,18 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <switch hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="enK-TC-JP5">
-                                <rect key="frame" x="182.66666666666666" y="352.66666666666669" width="51" height="31"/>
+                                <rect key="frame" x="487.5" y="667.5" width="51" height="31"/>
                             </switch>
                             <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3qD-C1-ssL">
-                                <rect key="frame" x="0.0" y="20" width="414" height="606"/>
+                                <rect key="frame" x="0.0" y="20" width="1024" height="1157.5"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLc-ce-nNC">
-                                <rect key="frame" x="114" y="634" width="186" height="92"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLc-ce-nNC" customClass="BetterButton" customModule="BabyDraw" customModuleProvider="target">
+                                <rect key="frame" x="281.5" y="1185.5" width="461" height="170.5"/>
                                 <color key="backgroundColor" red="0.0" green="0.58980089426040649" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="MarkerComp" family="Marker Comp" pointSize="36"/>
                                 <state key="normal" title="Clear">
@@ -46,13 +46,13 @@
                                     <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Btb-Xe-ubz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" horizontalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7y-Zz-nZH">
-                                <rect key="frame" x="358.66666666666674" y="670.66666666666652" width="55.333333333333314" height="55.333333333333371"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" horizontalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7y-Zz-nZH" customClass="BetterButton" customModule="BabyDraw" customModuleProvider="target">
+                                <rect key="frame" x="877.5" y="1211.5" width="136.5" height="136.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="F7y-Zz-nZH" secondAttribute="height" multiplier="1:1" id="JTq-fy-L0b"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="MarkerComp" family="Marker Comp" pointSize="13"/>
+                                <fontDescription key="fontDescription" name="MarkerComp" family="Marker Comp" pointSize="15"/>
                                 <state key="normal" title="VE">
                                     <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -60,13 +60,13 @@
                                     <action selector="vE:" destination="BYZ-38-t0r" eventType="touchUpInside" id="70e-xh-jqt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" horizontalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFQ-a5-6Wv">
-                                <rect key="frame" x="0.0" y="670.66666666666652" width="55.333333333333336" height="55.333333333333371"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" horizontalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFQ-a5-6Wv" customClass="BetterButton" customModule="BabyDraw" customModuleProvider="target">
+                                <rect key="frame" x="10" y="1211.5" width="137" height="136.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="GFQ-a5-6Wv" secondAttribute="height" multiplier="1:1" id="X3I-tE-cFF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="MarkerComp" family="Marker Comp" pointSize="13"/>
+                                <fontDescription key="fontDescription" name="MarkerComp" family="Marker Comp" pointSize="15"/>
                                 <state key="normal" title="SA">
                                     <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -79,21 +79,21 @@
                         <constraints>
                             <constraint firstItem="enK-TC-JP5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="24l-68-JaY"/>
                             <constraint firstItem="rLc-ce-nNC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2xI-cQ-0i6"/>
-                            <constraint firstItem="GFQ-a5-6Wv" firstAttribute="height" secondItem="rLc-ce-nNC" secondAttribute="height" multiplier="0.6" id="59O-0F-Ybs"/>
+                            <constraint firstItem="GFQ-a5-6Wv" firstAttribute="height" secondItem="rLc-ce-nNC" secondAttribute="height" multiplier="0.8" id="59O-0F-Ybs"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rLc-ce-nNC" secondAttribute="bottom" constant="10" id="JmY-W0-phi"/>
                             <constraint firstItem="rLc-ce-nNC" firstAttribute="top" secondItem="3qD-C1-ssL" secondAttribute="bottom" constant="8" id="L6j-Uw-IgI"/>
                             <constraint firstItem="enK-TC-JP5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qzl-C2-0oW"/>
-                            <constraint firstAttribute="trailing" secondItem="F7y-Zz-nZH" secondAttribute="trailing" id="SNZ-I2-aIx"/>
+                            <constraint firstAttribute="trailing" secondItem="F7y-Zz-nZH" secondAttribute="trailing" constant="10" id="SNZ-I2-aIx"/>
                             <constraint firstItem="3qD-C1-ssL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WG0-ge-zIg"/>
-                            <constraint firstItem="GFQ-a5-6Wv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Z4K-OY-tqR"/>
+                            <constraint firstItem="GFQ-a5-6Wv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="Z4K-OY-tqR"/>
                             <constraint firstItem="rLc-ce-nNC" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.125" id="Z9b-Iz-zjh"/>
                             <constraint firstItem="3qD-C1-ssL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="f5q-9Z-Act"/>
                             <constraint firstItem="rLc-ce-nNC" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.45" id="fGx-l0-Iuz"/>
                             <constraint firstItem="3qD-C1-ssL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hkh-mi-tDb"/>
-                            <constraint firstItem="GFQ-a5-6Wv" firstAttribute="bottom" secondItem="rLc-ce-nNC" secondAttribute="bottom" id="iP3-4L-Xjf"/>
-                            <constraint firstItem="F7y-Zz-nZH" firstAttribute="bottom" secondItem="rLc-ce-nNC" secondAttribute="bottom" id="pZZ-vt-zy7"/>
+                            <constraint firstItem="GFQ-a5-6Wv" firstAttribute="bottom" secondItem="rLc-ce-nNC" secondAttribute="bottom" constant="-8" id="iP3-4L-Xjf"/>
+                            <constraint firstItem="F7y-Zz-nZH" firstAttribute="bottom" secondItem="rLc-ce-nNC" secondAttribute="bottom" constant="-8" id="pZZ-vt-zy7"/>
                             <constraint firstAttribute="trailing" secondItem="3qD-C1-ssL" secondAttribute="trailing" id="u9A-Oe-eMi"/>
-                            <constraint firstItem="F7y-Zz-nZH" firstAttribute="height" secondItem="rLc-ce-nNC" secondAttribute="height" multiplier="0.6" id="y89-9M-QmY"/>
+                            <constraint firstItem="F7y-Zz-nZH" firstAttribute="height" secondItem="rLc-ce-nNC" secondAttribute="height" multiplier="0.8" id="y89-9M-QmY"/>
                         </constraints>
                     </view>
                     <connections>

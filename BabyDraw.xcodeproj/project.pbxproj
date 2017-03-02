@@ -10,6 +10,7 @@
 		E11D9DC31E6330A3002B4BFB /* spring.wav in Resources */ = {isa = PBXBuildFile; fileRef = E11D9DC21E6330A3002B4BFB /* spring.wav */; };
 		E11D9DC51E637761002B4BFB /* Marker Comp.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E11D9DC41E637761002B4BFB /* Marker Comp.ttf */; };
 		E11D9DC71E637EB4002B4BFB /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E11D9DC61E637EB4002B4BFB /* Settings.bundle */; };
+		E11D9DC91E67B4C4002B4BFB /* BetterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11D9DC81E67B4C4002B4BFB /* BetterButton.swift */; };
 		E14EB90E1E5FA5D200619973 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14EB90D1E5FA5D200619973 /* AppDelegate.swift */; };
 		E14EB9101E5FA5D200619973 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14EB90F1E5FA5D200619973 /* ViewController.swift */; };
 		E14EB9131E5FA5D200619973 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E14EB9111E5FA5D200619973 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		E11D9DC21E6330A3002B4BFB /* spring.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = spring.wav; sourceTree = "<group>"; };
 		E11D9DC41E637761002B4BFB /* Marker Comp.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Marker Comp.ttf"; sourceTree = "<group>"; };
 		E11D9DC61E637EB4002B4BFB /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		E11D9DC81E67B4C4002B4BFB /* BetterButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetterButton.swift; sourceTree = "<group>"; };
 		E14EB90A1E5FA5D100619973 /* BabyDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BabyDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E14EB90D1E5FA5D200619973 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E14EB90F1E5FA5D200619973 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				E14EB90D1E5FA5D200619973 /* AppDelegate.swift */,
 				E14EB90F1E5FA5D200619973 /* ViewController.swift */,
 				E14EB9111E5FA5D200619973 /* Main.storyboard */,
+				E11D9DC81E67B4C4002B4BFB /* BetterButton.swift */,
 				E14EB9141E5FA5D200619973 /* Assets.xcassets */,
 				E14EB9161E5FA5D200619973 /* LaunchScreen.storyboard */,
 				E14EB9191E5FA5D200619973 /* Info.plist */,
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E14EB9101E5FA5D200619973 /* ViewController.swift in Sources */,
+				E11D9DC91E67B4C4002B4BFB /* BetterButton.swift in Sources */,
 				E14EB90E1E5FA5D200619973 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
