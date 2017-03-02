@@ -40,10 +40,7 @@ class ViewController: UIViewController {
         //settings button for sound FX
         registerSettingsBundle()
         updateDisplayFromDefaults()
-        
-       // let screenWidth = screenSize.width
-        //let screenHeight = screenSize.height
-        
+              
         //load sound effect, and prepare to play it on check so it doesnt lag on intial button press.
         let path = Bundle.main.path(forResource: "spring.wav", ofType:nil)!
         let url = URL(fileURLWithPath: path)
@@ -63,24 +60,7 @@ class ViewController: UIViewController {
         imageView.layer.shadowRadius = 0
         imageView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
         
-        
-//        if screenWidth == Constants.iPhoneElseWidth{
-//           
-//           reset.titleLabel!.font =  UIFont(name: "Marker Comp", size: 30)
-//            
-//        }else if screenWidth == Constants.iPhone6Width{
-//           
-//            reset.titleLabel!.font =  UIFont(name: "Marker Comp", size: 38)
-//            
-//        }else if screenWidth >= Constants.iPhone6PlusWidth{
-//            
-//            reset.titleLabel!.font =  UIFont(name: "Marker Comp", size: 39)
-//            
-//        }else if screenWidth >= Constants.ipadWidth{
-//            
-//            reset.titleLabel!.font =  UIFont(name: "Marker Comp", size: 36)
-//        }
-
+ 
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.defaultsChanged), name: UserDefaults.didChangeNotification,object: nil)
         
     }
