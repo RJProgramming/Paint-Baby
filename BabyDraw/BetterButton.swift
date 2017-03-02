@@ -14,6 +14,14 @@ class BetterButton: UIButton {
         
         super.init(coder: aDecoder)
         
+        
+        
+        self.titleLabel!.font = UIFont(name: "Marker Comp", size: 30)
+        self.titleLabel?.minimumScaleFactor = 0.5
+        self.titleLabel?.numberOfLines = 0
+        self.titleLabel?.adjustsFontSizeToFitWidth = true
+        self.titleLabel?.lineBreakMode = NSLineBreakMode.byClipping
+        
         self.layer.cornerRadius = 4
         self.layer.shadowOpacity = 1
         self.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
