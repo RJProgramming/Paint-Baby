@@ -31,6 +31,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var fxSwitch: UISwitch!
     @IBOutlet weak var sa1: UIButton!
     @IBOutlet weak var sa2: UIButton!
+    @IBOutlet weak var saveLabel: UILabel!
+    @IBOutlet weak var saveLabel2: UILabel!
     
     
     
@@ -194,11 +196,27 @@ class ViewController: UIViewController {
     
     @IBAction func vE(_ sender: Any) {
         
+        saveLabel.isHidden = true
+        saveLabel2.isHidden = true
+        
         if imageView.image != nil{
             if sa1.isHighlighted && sa2.isHighlighted {
                 UIImageWriteToSavedPhotosAlbum(imageView.image!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
-                
+                saveLabel.isHidden = true
+                saveLabel2.isHidden = true
             }
+        }
+        
+    }
+    
+    @IBAction func vELetGo(_ sender: Any) {
+        
+        if sa1.isHighlighted && sa2.isHighlighted {
+            saveLabel.isHidden = true
+            saveLabel2.isHidden = true
+        }else{
+            saveLabel.isHidden = false
+            saveLabel2.isHidden = false
         }
         
     }
@@ -206,15 +224,32 @@ class ViewController: UIViewController {
     
     @IBAction func sA(_ sender: Any) {
         
+        saveLabel.isHidden = true
+        saveLabel2.isHidden = true
+        
         if imageView.image != nil{
             if sa1.isHighlighted && sa2.isHighlighted {
                 UIImageWriteToSavedPhotosAlbum(imageView.image!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+                
+                saveLabel.isHidden = true
+                saveLabel2.isHidden = true
                 
             }
         }
         
     }
     
+    @IBAction func sALetGo(_ sender: Any) {
+        
+        if sa1.isHighlighted && sa2.isHighlighted {
+            saveLabel.isHidden = true
+            saveLabel2.isHidden = true
+        }else{
+            saveLabel.isHidden = false
+            saveLabel2.isHidden = false
+        }
+        
+    }
     
 
 }
