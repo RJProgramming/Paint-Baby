@@ -17,7 +17,7 @@ class BetterButton: UIButton {
         
         
         self.titleLabel!.font = UIFont(name: "Marker Comp", size: 28)
-        self.titleLabel?.minimumScaleFactor = 0.5
+        self.titleLabel?.minimumScaleFactor = 0.4
         self.titleLabel?.numberOfLines = 0
         self.titleLabel?.adjustsFontSizeToFitWidth = true
         self.titleLabel?.lineBreakMode = NSLineBreakMode.byClipping
