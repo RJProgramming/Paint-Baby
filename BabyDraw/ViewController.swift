@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     var red: CGFloat = 0
     var green: CGFloat = 0
     var blue: CGFloat = 0
-    var brushWidth: CGFloat = 100.0
+    var brushWidth: CGFloat = 75.0
     var opacity: CGFloat = 1.0
     var swiped = false
     var clearCounter = 0
@@ -177,11 +177,11 @@ class ViewController: UIViewController {
     func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
         if let error = error {
             // we got back an error!
-            let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+            let ac = UIAlertController(title: "Please allow access to camera roll in phone settings to save artwork.", message: error.localizedDescription, preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .default))
             present(ac, animated: true)
         } else {
-            let ac = UIAlertController(title: "Saved!", message: "Drawing saved!", preferredStyle: .alert)
+            let ac = UIAlertController(title: "Saved!", message: "Artwork has been saved to the camera roll.", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .default))
             present(ac, animated: true)
         }
