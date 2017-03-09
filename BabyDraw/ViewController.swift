@@ -127,6 +127,9 @@ class ViewController: UIViewController {
         
         let context = UIGraphicsGetCurrentContext()
         
+        saveLabel.isHidden = true
+        saveLabel2.isHidden = true
+        
         context?.move(to: fromPoint)
         context?.addLine(to: toPoint)
         
@@ -142,7 +145,7 @@ class ViewController: UIViewController {
         //clears screen after a number of points
         clearCounter += 1
         
-        if clearCounter > 500 {
+        if clearCounter > 600 {
             imageView.image = nil
             clearCounter = 0
         }

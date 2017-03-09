@@ -74,7 +74,7 @@
                                     <constraint firstAttribute="height" constant="34.670000000000002" id="ULG-oQ-0Z1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MarkerComp" family="Marker Comp" pointSize="23"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to save your drawing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="HkI-YP-bPW">
@@ -83,7 +83,7 @@
                                     <constraint firstAttribute="height" constant="34.670000000000002" id="Am8-De-G9E"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MarkerComp" family="Marker Comp" pointSize="23"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
