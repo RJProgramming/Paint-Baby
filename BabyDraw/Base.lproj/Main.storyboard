@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,18 +23,18 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <switch hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="enK-TC-JP5">
-                                <rect key="frame" x="135.5" y="224.5" width="51" height="31"/>
+                                <rect key="frame" x="182.66666666666666" y="352.66666666666669" width="51" height="31"/>
                             </switch>
                             <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3qD-C1-ssL">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="402"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="626"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLc-ce-nNC" customClass="BetterButton" customModule="BabyDraw" customModuleProvider="target">
-                                <rect key="frame" x="88" y="410" width="144" height="60"/>
+                                <rect key="frame" x="114" y="634" width="186" height="92"/>
                                 <color key="backgroundColor" red="0.0" green="0.58980089426040649" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="MarkerComp" family="Marker Comp" pointSize="36"/>
                                 <state key="normal" title="Clear">
@@ -45,7 +45,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" horizontalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7y-Zz-nZH" customClass="BetterButton" customModule="BabyDraw" customModuleProvider="target">
-                                <rect key="frame" x="262" y="410" width="49" height="60"/>
+                                <rect key="frame" x="330" y="634" width="75" height="92"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="MarkerComp" family="Marker Comp" pointSize="15"/>
                                 <state key="normal" title="save">
@@ -57,7 +57,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" horizontalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFQ-a5-6Wv" customClass="BetterButton" customModule="BabyDraw" customModuleProvider="target">
-                                <rect key="frame" x="9" y="410" width="49" height="60"/>
+                                <rect key="frame" x="9" y="634" width="75" height="92"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="MarkerComp" family="Marker Comp" pointSize="15"/>
                                 <state key="normal" title="save">
@@ -69,7 +69,7 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press both save buttons at the same time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="kBd-GC-LCf">
-                                <rect key="frame" x="20" y="182.5" width="280" height="35"/>
+                                <rect key="frame" x="20" y="310.66666666666669" width="374" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34.670000000000002" id="ULG-oQ-0Z1"/>
                                 </constraints>
@@ -80,7 +80,7 @@
                                 <size key="shadowOffset" width="0.0" height="2"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to save your drawing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="HkI-YP-bPW">
-                                <rect key="frame" x="20" y="222.5" width="280" height="35"/>
+                                <rect key="frame" x="20" y="350.66666666666669" width="374" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34.670000000000002" id="Am8-De-G9E"/>
                                 </constraints>

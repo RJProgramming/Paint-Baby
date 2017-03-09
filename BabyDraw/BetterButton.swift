@@ -14,8 +14,6 @@ class BetterButton: UIButton {
         
         super.init(coder: aDecoder)
         
-        
-        
         self.titleLabel!.font = UIFont(name: "Marker Comp", size: 28)
         self.titleLabel?.minimumScaleFactor = 0.4
         self.titleLabel?.numberOfLines = 0
