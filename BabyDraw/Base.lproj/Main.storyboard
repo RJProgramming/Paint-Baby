@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -68,7 +69,7 @@
                                     <action selector="sALetGo:" destination="BYZ-38-t0r" eventType="touchDown" id="O6F-kX-6LQ"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press both save buttons at the same time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="kBd-GC-LCf">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="kBd-GC-LCf">
                                 <rect key="frame" x="20" y="310.66666666666669" width="374" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34.670000000000002" id="ULG-oQ-0Z1"/>
@@ -76,10 +77,9 @@
                                 <fontDescription key="fontDescription" name="MarkerComp" family="Marker Comp" pointSize="23"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="shadowOffset" width="0.0" height="2"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to save your drawing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="HkI-YP-bPW">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="HkI-YP-bPW">
                                 <rect key="frame" x="20" y="350.66666666666669" width="374" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34.670000000000002" id="Am8-De-G9E"/>
@@ -87,7 +87,16 @@
                                 <fontDescription key="fontDescription" name="MarkerComp" family="Marker Comp" pointSize="23"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="0.0" height="2"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="3FP-bA-gKs">
+                                <rect key="frame" x="20" y="270.66666666666669" width="374" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34.670000000000002" id="7vQ-oL-SbG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerComp" family="Marker Comp" pointSize="23"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="2"/>
                             </label>
                         </subviews>
@@ -97,6 +106,8 @@
                             <constraint firstItem="rLc-ce-nNC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2xI-cQ-0i6"/>
                             <constraint firstItem="GFQ-a5-6Wv" firstAttribute="height" secondItem="rLc-ce-nNC" secondAttribute="height" id="59O-0F-Ybs"/>
                             <constraint firstItem="rLc-ce-nNC" firstAttribute="leading" secondItem="GFQ-a5-6Wv" secondAttribute="trailing" constant="30" id="7rR-l3-Vdr"/>
+                            <constraint firstItem="3FP-bA-gKs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="AU0-ED-i3S"/>
+                            <constraint firstItem="3FP-bA-gKs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Fbf-2H-CWL"/>
                             <constraint firstAttribute="trailing" secondItem="HkI-YP-bPW" secondAttribute="trailing" constant="20" id="HLx-HE-7sD"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rLc-ce-nNC" secondAttribute="bottom" constant="10" id="JmY-W0-phi"/>
                             <constraint firstItem="rLc-ce-nNC" firstAttribute="top" secondItem="3qD-C1-ssL" secondAttribute="bottom" constant="8" id="L6j-Uw-IgI"/>
@@ -107,7 +118,9 @@
                             <constraint firstItem="kBd-GC-LCf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-40" id="TyQ-Vr-V5K"/>
                             <constraint firstItem="3qD-C1-ssL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WG0-ge-zIg"/>
                             <constraint firstItem="HkI-YP-bPW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="XET-C4-0Ap"/>
+                            <constraint firstItem="3FP-bA-gKs" firstAttribute="height" secondItem="kBd-GC-LCf" secondAttribute="height" id="XRW-fT-wZD"/>
                             <constraint firstItem="rLc-ce-nNC" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.125" id="Z9b-Iz-zjh"/>
+                            <constraint firstItem="3FP-bA-gKs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZI7-Xm-Req"/>
                             <constraint firstItem="F7y-Zz-nZH" firstAttribute="leading" secondItem="rLc-ce-nNC" secondAttribute="trailing" constant="30" id="a1p-TU-3df"/>
                             <constraint firstItem="3qD-C1-ssL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="f5q-9Z-Act"/>
                             <constraint firstItem="HkI-YP-bPW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="f7b-5a-Z11"/>
@@ -120,6 +133,7 @@
                             <constraint firstItem="HkI-YP-bPW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vjk-2z-rjh"/>
                             <constraint firstItem="kBd-GC-LCf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="vzh-03-KAM"/>
                             <constraint firstItem="F7y-Zz-nZH" firstAttribute="height" secondItem="rLc-ce-nNC" secondAttribute="height" id="y89-9M-QmY"/>
+                            <constraint firstItem="3FP-bA-gKs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-80" id="z3u-3u-zFL"/>
                         </constraints>
                     </view>
                     <connections>
@@ -130,6 +144,7 @@
                         <outlet property="sa2" destination="F7y-Zz-nZH" id="YJo-TD-0lg"/>
                         <outlet property="saveLabel" destination="kBd-GC-LCf" id="Qo2-Lg-3KV"/>
                         <outlet property="saveLabel2" destination="HkI-YP-bPW" id="DQ8-u3-kIm"/>
+                        <outlet property="saveLabel3" destination="3FP-bA-gKs" id="mBd-7f-zL7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

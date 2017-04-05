@@ -33,6 +33,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var sa2: UIButton!
     @IBOutlet weak var saveLabel: UILabel!
     @IBOutlet weak var saveLabel2: UILabel!
+    @IBOutlet weak var saveLabel3: UILabel!
     
     
     
@@ -42,6 +43,16 @@ class ViewController: UIViewController {
         //settings button for sound FX
         registerSettingsBundle()
         updateDisplayFromDefaults()
+        
+        let strokeTextAttributes = [
+            NSStrokeColorAttributeName : UIColor.black,
+            NSForegroundColorAttributeName : UIColor.white,
+            NSStrokeWidthAttributeName : 10.0,
+            ] as [String : Any]
+        
+        saveLabel.attributedText = NSAttributedString(string: "Press both save buttons", attributes: strokeTextAttributes)
+        saveLabel2.attributedText = NSAttributedString(string: "at the same time", attributes: strokeTextAttributes)
+        saveLabel3.attributedText = NSAttributedString(string: "To save your drawing", attributes: strokeTextAttributes)
               
         //load sound effect, and prepare to play it on check so it doesnt lag on intial button press.
         let path = Bundle.main.path(forResource: "spring.wav", ofType:nil)!
@@ -129,6 +140,7 @@ class ViewController: UIViewController {
         
         saveLabel.isHidden = true
         saveLabel2.isHidden = true
+        saveLabel3.isHidden = true
         
         context?.move(to: fromPoint)
         context?.addLine(to: toPoint)
@@ -142,13 +154,15 @@ class ViewController: UIViewController {
         imageView.image = UIGraphicsGetImageFromCurrentImageContext()
         imageView.alpha = opacity
         
-        //clears screen after a number of points
-        clearCounter += 1
         
-        if clearCounter > 600 {
-            imageView.image = nil
-            clearCounter = 0
-        }
+       // removed clear counter
+        //clears screen after a number of points
+       // clearCounter += 1
+        
+//        if clearCounter > 600 {
+//            imageView.image = nil
+//            clearCounter = 0
+//        }
         
         UIGraphicsEndImageContext()
     }
@@ -201,12 +215,14 @@ class ViewController: UIViewController {
         
         saveLabel.isHidden = true
         saveLabel2.isHidden = true
+        saveLabel3.isHidden = true
         
         if imageView.image != nil{
             if sa1.isHighlighted && sa2.isHighlighted {
                 UIImageWriteToSavedPhotosAlbum(imageView.image!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
                 saveLabel.isHidden = true
                 saveLabel2.isHidden = true
+                saveLabel3.isHidden = true
             }
         }
         
@@ -217,9 +233,11 @@ class ViewController: UIViewController {
         if sa1.isHighlighted && sa2.isHighlighted {
             saveLabel.isHidden = true
             saveLabel2.isHidden = true
+            saveLabel3.isHidden = true
         }else{
             saveLabel.isHidden = false
             saveLabel2.isHidden = false
+            saveLabel3.isHidden = false
         }
         
     }
@@ -229,6 +247,7 @@ class ViewController: UIViewController {
         
         saveLabel.isHidden = true
         saveLabel2.isHidden = true
+        saveLabel3.isHidden = true
         
         if imageView.image != nil{
             if sa1.isHighlighted && sa2.isHighlighted {
@@ -236,6 +255,7 @@ class ViewController: UIViewController {
                 
                 saveLabel.isHidden = true
                 saveLabel2.isHidden = true
+                saveLabel3.isHidden = true
                 
             }
         }
@@ -247,9 +267,11 @@ class ViewController: UIViewController {
         if sa1.isHighlighted && sa2.isHighlighted {
             saveLabel.isHidden = true
             saveLabel2.isHidden = true
+            saveLabel3.isHidden = true
         }else{
             saveLabel.isHidden = false
             saveLabel2.isHidden = false
+            saveLabel3.isHidden = false
         }
         
     }
