@@ -50,9 +50,9 @@ class ViewController: UIViewController {
             NSStrokeWidthAttributeName : -4.0,
             ] as [String : Any]
         
-        saveLabel.attributedText = NSAttributedString(string: "Press both save buttons", attributes: strokeTextAttributes)
+        saveLabel.attributedText = NSAttributedString(string: "Tap both save buttons", attributes: strokeTextAttributes)
         saveLabel2.attributedText = NSAttributedString(string: "at the same time", attributes: strokeTextAttributes)
-        saveLabel3.attributedText = NSAttributedString(string: "To save your drawing", attributes: strokeTextAttributes)
+        saveLabel3.attributedText = NSAttributedString(string: "to save your drawing", attributes: strokeTextAttributes)
               
         //load sound effect, and prepare to play it on check so it doesnt lag on intial button press.
         let path = Bundle.main.path(forResource: "spring.wav", ofType:nil)!
