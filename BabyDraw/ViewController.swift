@@ -192,11 +192,11 @@ class ViewController: UIViewController {
     func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
         if let error = error {
             // we got back an error!
-            let ac = UIAlertController(title: "Please allow access to camera roll in phone settings to save artwork.", message: error.localizedDescription, preferredStyle: .alert)
+            let ac = UIAlertController(title: "Please allow Paint Baby access to camera roll in settings to save images.", message: error.localizedDescription, preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .default))
             present(ac, animated: true)
         } else {
-            let ac = UIAlertController(title: "Saved!", message: "Artwork has been saved to the camera roll.", preferredStyle: .alert)
+            let ac = UIAlertController(title: "Saved!", message: "Saved to camera roll!", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .default))
             present(ac, animated: true)
         }
