@@ -35,11 +35,11 @@
                                 <rect key="frame" x="163" y="390.66666666666669" width="51" height="31"/>
                             </switch>
                             <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3qD-C1-ssL">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="840"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLc-ce-nNC" customClass="BetterButton" customModule="BabyDraw" customModuleProvider="target">
-                                <rect key="frame" x="103" y="666.66666666666652" width="169" height="101.33333333333337"/>
+                                <rect key="frame" x="103" y="695" width="169" height="73"/>
                                 <color key="backgroundColor" red="0.0" green="0.58980089426040649" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="36"/>
                                 <state key="normal" title="Clear">
@@ -50,7 +50,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" horizontalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7y-Zz-nZH" customClass="BetterButton" customModule="BabyDraw" customModuleProvider="target">
-                                <rect key="frame" x="302" y="666.66666666666652" width="64" height="101.33333333333337"/>
+                                <rect key="frame" x="302" y="695" width="64" height="73"/>
                                 <color key="backgroundColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
                                 <state key="normal" image="SaveIcon">
                                     <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -61,7 +61,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" horizontalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFQ-a5-6Wv" customClass="BetterButton" customModule="BabyDraw" customModuleProvider="target">
-                                <rect key="frame" x="9" y="666.66666666666652" width="64" height="101.33333333333337"/>
+                                <rect key="frame" x="9" y="695" width="64" height="73"/>
                                 <color key="backgroundColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
                                 <state key="normal" image="SaveIcon"/>
                                 <connections>
@@ -119,7 +119,7 @@
                             <constraint firstItem="3qD-C1-ssL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WG0-ge-zIg"/>
                             <constraint firstItem="HkI-YP-bPW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="XET-C4-0Ap"/>
                             <constraint firstItem="3FP-bA-gKs" firstAttribute="height" secondItem="kBd-GC-LCf" secondAttribute="height" id="XRW-fT-wZD"/>
-                            <constraint firstItem="rLc-ce-nNC" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.125" id="Z9b-Iz-zjh"/>
+                            <constraint firstItem="rLc-ce-nNC" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.09" id="Z9b-Iz-zjh"/>
                             <constraint firstItem="3FP-bA-gKs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZI7-Xm-Req"/>
                             <constraint firstItem="F7y-Zz-nZH" firstAttribute="leading" secondItem="rLc-ce-nNC" secondAttribute="trailing" constant="30" id="a1p-TU-3df"/>
                             <constraint firstItem="3qD-C1-ssL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-44" id="f5q-9Z-Act"/>

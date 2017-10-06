@@ -67,7 +67,7 @@ class ViewController: UIViewController {
             // couldn't load file :(
         }
         
-        //imageView.layer.cornerRadius = 4
+        
         imageView.layer.shadowOpacity = 1
         imageView.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
         imageView.layer.shadowRadius = 0
