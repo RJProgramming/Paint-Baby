@@ -24,6 +24,8 @@
 	<true/>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Paint Baby needs access to your photos to save the current image.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Paint Baby needs access to your photos to save the current image.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>marker comp.ttf</string>
