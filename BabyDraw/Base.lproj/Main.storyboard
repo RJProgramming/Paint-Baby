@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,7 +32,7 @@
                                 <rect key="frame" x="182.66666666666666" y="352.66666666666669" width="51" height="31"/>
                             </switch>
                             <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3qD-C1-ssL">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="626"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLc-ce-nNC" customClass="BetterButton" customModule="BabyDraw" customModuleProvider="target">
@@ -45,11 +46,10 @@
                                     <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Btb-Xe-ubz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" horizontalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7y-Zz-nZH" customClass="BetterButton" customModule="BabyDraw" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" horizontalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7y-Zz-nZH" customClass="BetterButton" customModule="BabyDraw" customModuleProvider="target">
                                 <rect key="frame" x="330" y="634" width="75" height="92"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="MarkerComp" family="Marker Comp" pointSize="15"/>
-                                <state key="normal" title="save">
+                                <color key="backgroundColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                                <state key="normal" image="SaveIcon">
                                     <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -57,13 +57,10 @@
                                     <action selector="vELetGo:" destination="BYZ-38-t0r" eventType="touchDown" id="u9g-sW-oxr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" horizontalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFQ-a5-6Wv" customClass="BetterButton" customModule="BabyDraw" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" horizontalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFQ-a5-6Wv" customClass="BetterButton" customModule="BabyDraw" customModuleProvider="target">
                                 <rect key="frame" x="9" y="634" width="75" height="92"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="MarkerComp" family="Marker Comp" pointSize="15"/>
-                                <state key="normal" title="save">
-                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                                <color key="backgroundColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                                <state key="normal" image="SaveIcon"/>
                                 <connections>
                                     <action selector="sA:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sbp-GR-pGU"/>
                                     <action selector="sALetGo:" destination="BYZ-38-t0r" eventType="touchDown" id="O6F-kX-6LQ"/>
@@ -110,11 +107,11 @@
                             <constraint firstItem="3FP-bA-gKs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Fbf-2H-CWL"/>
                             <constraint firstAttribute="trailing" secondItem="HkI-YP-bPW" secondAttribute="trailing" constant="20" id="HLx-HE-7sD"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rLc-ce-nNC" secondAttribute="bottom" constant="10" id="JmY-W0-phi"/>
-                            <constraint firstItem="rLc-ce-nNC" firstAttribute="top" secondItem="3qD-C1-ssL" secondAttribute="bottom" constant="8" id="L6j-Uw-IgI"/>
+                            <constraint firstItem="rLc-ce-nNC" firstAttribute="top" secondItem="3qD-C1-ssL" secondAttribute="bottom" constant="-102" id="L6j-Uw-IgI"/>
                             <constraint firstAttribute="trailing" secondItem="kBd-GC-LCf" secondAttribute="trailing" constant="20" id="LEf-Kp-kNi"/>
                             <constraint firstItem="enK-TC-JP5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qzl-C2-0oW"/>
-                            <constraint firstItem="GFQ-a5-6Wv" firstAttribute="top" secondItem="3qD-C1-ssL" secondAttribute="bottom" constant="8" id="R4k-2c-RVX"/>
-                            <constraint firstItem="F7y-Zz-nZH" firstAttribute="top" secondItem="3qD-C1-ssL" secondAttribute="bottom" constant="8" id="TD1-Kd-WBL"/>
+                            <constraint firstItem="GFQ-a5-6Wv" firstAttribute="top" secondItem="3qD-C1-ssL" secondAttribute="bottom" constant="-102" id="R4k-2c-RVX"/>
+                            <constraint firstItem="F7y-Zz-nZH" firstAttribute="top" secondItem="3qD-C1-ssL" secondAttribute="bottom" constant="-102" id="TD1-Kd-WBL"/>
                             <constraint firstItem="kBd-GC-LCf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-40" id="TyQ-Vr-V5K"/>
                             <constraint firstItem="3qD-C1-ssL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WG0-ge-zIg"/>
                             <constraint firstItem="HkI-YP-bPW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="XET-C4-0Ap"/>
@@ -149,7 +146,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="110.9375" y="119.53124999999999"/>
+            <point key="canvasLocation" x="110.14492753623189" y="119.0217391304348"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SaveIcon" width="19" height="24"/>
+    </resources>
 </document>
