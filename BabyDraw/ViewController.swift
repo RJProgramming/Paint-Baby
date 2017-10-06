@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     var red: CGFloat = 0
     var green: CGFloat = 0
     var blue: CGFloat = 0
-    var brushWidth: CGFloat = 75.0
+    var brushWidth: CGFloat = 65.0
     var opacity: CGFloat = 1.0
     var swiped = false
     var clearCounter = 0
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         let strokeTextAttributes = [
             NSStrokeColorAttributeName : UIColor.black,
             NSForegroundColorAttributeName : UIColor.white,
-            NSStrokeWidthAttributeName : 10.0,
+            NSStrokeWidthAttributeName : -4.0,
             ] as [String : Any]
         
         saveLabel.attributedText = NSAttributedString(string: "Press both save buttons", attributes: strokeTextAttributes)
