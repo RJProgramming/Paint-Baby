@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     var red: CGFloat = 0
     var green: CGFloat = 0
     var blue: CGFloat = 0
-    var brushWidth: CGFloat = 65.0
+    var brushWidth: CGFloat = 45.0
     var opacity: CGFloat = 1.0
     var swiped = false
     var clearCounter = 0
@@ -50,9 +50,10 @@ class ViewController: UIViewController {
             NSStrokeWidthAttributeName : -4.0,
             ] as [String : Any]
         
-        saveLabel.attributedText = NSAttributedString(string: "Tap both save buttons", attributes: strokeTextAttributes)
+        saveLabel3.attributedText = NSAttributedString(string: "To save your drawing", attributes: strokeTextAttributes)
+        saveLabel.attributedText = NSAttributedString(string: "tap both save buttons", attributes: strokeTextAttributes)
         saveLabel2.attributedText = NSAttributedString(string: "at the same time", attributes: strokeTextAttributes)
-        saveLabel3.attributedText = NSAttributedString(string: "to save your drawing", attributes: strokeTextAttributes)
+        
               
         //load sound effect, and prepare to play it on check so it doesnt lag on intial button press.
         let path = Bundle.main.path(forResource: "spring.wav", ofType:nil)!
