@@ -137,6 +137,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="clearButton" destination="rLc-ce-nNC" id="qEA-0a-MXs"/>
                         <outlet property="fxSwitch" destination="enK-TC-JP5" id="dqt-Af-KZ6"/>
                         <outlet property="imageView" destination="3qD-C1-ssL" id="kxy-vB-BaX"/>
                         <outlet property="reset" destination="rLc-ce-nNC" id="6hb-qX-NnC"/>

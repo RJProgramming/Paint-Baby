@@ -19,13 +19,8 @@ class BetterButton: UIButton {
         self.titleLabel?.numberOfLines = 0
         self.titleLabel?.adjustsFontSizeToFitWidth = true
         self.titleLabel?.lineBreakMode = NSLineBreakMode.byClipping
-        //self.contentEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
-        
         self.layer.cornerRadius = 10
-        //self.layer.shadowOpacity = 0.5
-       // self.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-       //self.layer.shadowRadius = 30
-       //self.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        
         
     }
 

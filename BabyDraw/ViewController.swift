@@ -10,6 +10,15 @@ import UIKit
 import Foundation
 import AVFoundation
 
+extension UIView {
+    func shake() {
+        self.transform = CGAffineTransform(translationX: 20, y: 0)
+        UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
+            self.transform = CGAffineTransform.identity
+        }, completion: nil)
+    }
+}
+
 class ViewController: UIViewController {
     
     var lastPoint = CGPoint.zero
@@ -34,6 +43,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var saveLabel: UILabel!
     @IBOutlet weak var saveLabel2: UILabel!
     @IBOutlet weak var saveLabel3: UILabel!
+    @IBOutlet weak var clearButton: BetterButton!
     
     
     
@@ -155,16 +165,6 @@ class ViewController: UIViewController {
         imageView.image = UIGraphicsGetImageFromCurrentImageContext()
         imageView.alpha = opacity
         
-        
-       // removed clear counter
-        //clears screen after a number of points
-       // clearCounter += 1
-        
-//        if clearCounter > 600 {
-//            imageView.image = nil
-//            clearCounter = 0
-//        }
-        
         UIGraphicsEndImageContext()
     }
     
@@ -173,7 +173,6 @@ class ViewController: UIViewController {
         if let touch = touches.first {
             let currentPoint = touch.location(in: view)
             drawLineFrom(from: lastPoint, to: currentPoint)
-            
             lastPoint = currentPoint
         }
     }
@@ -208,7 +207,13 @@ class ViewController: UIViewController {
            sound.play()
            sound.volume = 0.4
         }
-       
+      
+        clearButton.transform = CGAffineTransform(translationX: 15, y: 0)
+        //clearButton.transform = CGAffineTransform(translationX: -15, y: 0)
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .curveEaseInOut, animations: {
+            self.clearButton.transform = CGAffineTransform.identity
+        }, completion: nil)
+        
        imageView.image = nil
     }
     
@@ -226,7 +231,7 @@ class ViewController: UIViewController {
                 saveLabel3.isHidden = true
             }
         }
-        
+        animateSaveButtons(sender: sa2)
     }
     
     @IBAction func vELetGo(_ sender: Any) {
@@ -240,7 +245,7 @@ class ViewController: UIViewController {
             saveLabel2.isHidden = false
             saveLabel3.isHidden = false
         }
-        
+         animateSaveButtons(sender: sa2)
     }
     
     
@@ -260,7 +265,7 @@ class ViewController: UIViewController {
                 
             }
         }
-        
+        animateSaveButtons(sender: sa1)
     }
     
     @IBAction func sALetGo(_ sender: Any) {
@@ -274,9 +279,17 @@ class ViewController: UIViewController {
             saveLabel2.isHidden = false
             saveLabel3.isHidden = false
         }
-        
+        animateSaveButtons(sender: sa1)
     }
     
+    func animateSaveButtons(sender: UIButton){
+    
+    sender.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+    UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
+    sender.transform = CGAffineTransform.identity
+    }, completion: nil)
+    
+    }
 
 }
 
