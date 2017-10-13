@@ -78,6 +78,9 @@ class ViewController: UIViewController {
             // couldn't load file :(
         }
         
+        //prevents app from stopping backgorund audio
+        let audioSession = AVAudioSession.sharedInstance()
+        try!audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers) //Causes audio from other sessions to be ducked (reduced in volume) while audio from this session plays
         
         imageView.layer.shadowOpacity = 1
         imageView.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
