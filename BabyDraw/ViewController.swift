@@ -64,6 +64,9 @@ class ViewController: UIViewController {
         saveLabel.attributedText = NSAttributedString(string: "tap both save buttons", attributes: strokeTextAttributes)
         saveLabel2.attributedText = NSAttributedString(string: "at the same time", attributes: strokeTextAttributes)
         
+        //prevents app from stopping backgorund audio
+        let audioSession = AVAudioSession.sharedInstance()
+        try!audioSession.setCategory(AVAudioSessionCategoryAmbient, with: AVAudioSessionCategoryOptions.mixWithOthers) //Causes audio from other sessions to be ducked (reduced in volume) while audio from this session plays
               
         //load sound effect, and prepare to play it on check so it doesnt lag on intial button press.
         let path = Bundle.main.path(forResource: "spring.wav", ofType:nil)!
@@ -78,9 +81,7 @@ class ViewController: UIViewController {
             // couldn't load file :(
         }
         
-        //prevents app from stopping backgorund audio
-        let audioSession = AVAudioSession.sharedInstance()
-        try!audioSession.setCategory(AVAudioSessionCategoryAmbient, with: AVAudioSessionCategoryOptions.duckOthers) //Causes audio from other sessions to be ducked (reduced in volume) while audio from this session plays
+   
         
         imageView.layer.shadowOpacity = 1
         imageView.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
