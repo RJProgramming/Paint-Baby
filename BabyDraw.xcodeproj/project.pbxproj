@@ -116,7 +116,7 @@
 			};
 			buildConfigurationList = E14EB9051E5FA5D100619973 /* Build configuration list for PBXProject "BabyDraw" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,

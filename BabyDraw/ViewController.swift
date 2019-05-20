@@ -55,10 +55,10 @@ class ViewController: UIViewController {
         updateDisplayFromDefaults()
         
         let strokeTextAttributes = [
-            NSStrokeColorAttributeName : UIColor.black,
-            NSForegroundColorAttributeName : UIColor.white,
-            NSStrokeWidthAttributeName : -4.0,
-            ] as [String : Any]
+            NSAttributedString.Key.strokeColor.rawValue : UIColor.black,
+            NSAttributedString.Key.foregroundColor : UIColor.white,
+            NSAttributedString.Key.strokeWidth : -4.0,
+            ] as! [NSAttributedString.Key : Any]
         
         saveLabel3.attributedText = NSAttributedString(string: "To save your drawing", attributes: strokeTextAttributes)
         saveLabel.attributedText = NSAttributedString(string: "tap both save buttons", attributes: strokeTextAttributes)
@@ -66,7 +66,15 @@ class ViewController: UIViewController {
         
         //prevents app from stopping backgorund audio
         let audioSession = AVAudioSession.sharedInstance()
-        try!audioSession.setCategory(AVAudioSessionCategoryAmbient, with: AVAudioSessionCategoryOptions.mixWithOthers) //Causes audio from other sessions to be ducked (reduced in volume) while audio from this session plays
+        
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.ambient, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch {
+            print(error)
+        }
+        
+//        try!audioSession.setCategory(AVAudioSessionCategoryAmbient, with: AVAudioSession.CategoryOptions.mixWithOthers) //Causes audio from other sessions to be ducked (reduced in volume) while audio from this session plays
               
         //load sound effect, and prepare to play it on check so it doesnt lag on intial button press.
         let path = Bundle.main.path(forResource: "spring.wav", ofType:nil)!
@@ -93,7 +101,7 @@ class ViewController: UIViewController {
         
     }
     
-    func defaultsChanged(){
+    @objc func defaultsChanged(){
         updateDisplayFromDefaults()
     }
     
@@ -192,7 +200,7 @@ class ViewController: UIViewController {
         return CGFloat(Float(arc4random()) / Float(UINT32_MAX)) * (max - min) + min
     }
     
-    func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
         if let error = error {
             // we got back an error!
             let ac = UIAlertController(title: "Please allow Paint Baby access to camera roll in settings to save images.", message: error.localizedDescription, preferredStyle: .alert)
