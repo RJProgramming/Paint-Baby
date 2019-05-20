@@ -138,6 +138,10 @@ class ViewController: UIViewController {
         green = randomCGFloat(min: 0, max: 1)
         blue = randomCGFloat(min: 0, max: 1)
         
+        red = round(100 * red) / 100
+        green = round(100 * green) / 100
+        blue = round(100 * blue) / 100
+        
         print("red: \(red)")
         print("green: \(green)")
         print("blue: \(blue)")
