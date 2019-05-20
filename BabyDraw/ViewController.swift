@@ -55,20 +55,20 @@ class ViewController: UIViewController {
         updateDisplayFromDefaults()
         
         let strokeTextAttributes = [
-            NSStrokeColorAttributeName : UIColor.black,
-            NSForegroundColorAttributeName : UIColor.white,
-            NSStrokeWidthAttributeName : -4.0,
+            NSAttributedString.Key.strokeColor : UIColor.black,
+            NSAttributedString.Key.foregroundColor : UIColor.white,
+            NSAttributedString.Key.strokeWidth : -4.0,
             ] as [NSAttributedString.Key : Any]
         
-        saveLabel3.attributedText = NSAttributedString(string: "To save your drawing", attributes: strokeTextAttributes as [String : Any])
-        saveLabel.attributedText = NSAttributedString(string: "tap both save buttons", attributes: strokeTextAttributes as [String : Any])
-        saveLabel2.attributedText = NSAttributedString(string: "at the same time", attributes: strokeTextAttributes as [String : Any])
+        saveLabel3.attributedText = NSAttributedString(string: "To save your drawing", attributes: strokeTextAttributes)
+        saveLabel.attributedText = NSAttributedString(string: "tap both save buttons", attributes: strokeTextAttributes)
+        saveLabel2.attributedText = NSAttributedString(string: "at the same time", attributes: strokeTextAttributes)
         
         //prevents app from stopping backgorund audio
         let audioSession = AVAudioSession.sharedInstance()
         
         
-        try!audioSession.setCategory(AVAudioSessionCategoryAmbient, with: AVAudioSession.CategoryOptions.mixWithOthers) //Causes audio from other sessions to be ducked (reduced in volume) while audio from this session plays
+        try!audioSession.setCategory(AVAudioSession.Category.ambient, mode: .default) //Causes audio from other sessions to be ducked (reduced in volume) while audio from this session plays
         
         //load sound effect, and prepare to play it on check so it doesnt lag on intial button press.
         let path = Bundle.main.path(forResource: "spring.wav", ofType:nil)!
@@ -299,3 +299,14 @@ class ViewController: UIViewController {
 
 }
 
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromAVAudioSessionCategory(_ input: AVAudioSession.Category) -> String {
+	return input.rawValue
+}
