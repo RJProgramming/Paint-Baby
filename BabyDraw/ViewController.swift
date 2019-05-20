@@ -55,27 +55,21 @@ class ViewController: UIViewController {
         updateDisplayFromDefaults()
         
         let strokeTextAttributes = [
-            NSAttributedString.Key.strokeColor.rawValue : UIColor.black,
-            NSAttributedString.Key.foregroundColor : UIColor.white,
-            NSAttributedString.Key.strokeWidth : -4.0,
-            ] as! [NSAttributedString.Key : Any]
+            NSStrokeColorAttributeName : UIColor.black,
+            NSForegroundColorAttributeName : UIColor.white,
+            NSStrokeWidthAttributeName : -4.0,
+            ] as [NSAttributedString.Key : Any]
         
-        saveLabel3.attributedText = NSAttributedString(string: "To save your drawing", attributes: strokeTextAttributes)
-        saveLabel.attributedText = NSAttributedString(string: "tap both save buttons", attributes: strokeTextAttributes)
-        saveLabel2.attributedText = NSAttributedString(string: "at the same time", attributes: strokeTextAttributes)
+        saveLabel3.attributedText = NSAttributedString(string: "To save your drawing", attributes: strokeTextAttributes as [String : Any])
+        saveLabel.attributedText = NSAttributedString(string: "tap both save buttons", attributes: strokeTextAttributes as [String : Any])
+        saveLabel2.attributedText = NSAttributedString(string: "at the same time", attributes: strokeTextAttributes as [String : Any])
         
         //prevents app from stopping backgorund audio
         let audioSession = AVAudioSession.sharedInstance()
         
-        do {
-            try AVAudioSession.sharedInstance().setCategory(.ambient, mode: .default)
-            try AVAudioSession.sharedInstance().setActive(true)
-        } catch {
-            print(error)
-        }
         
-//        try!audioSession.setCategory(AVAudioSessionCategoryAmbient, with: AVAudioSession.CategoryOptions.mixWithOthers) //Causes audio from other sessions to be ducked (reduced in volume) while audio from this session plays
-              
+        try!audioSession.setCategory(AVAudioSessionCategoryAmbient, with: AVAudioSession.CategoryOptions.mixWithOthers) //Causes audio from other sessions to be ducked (reduced in volume) while audio from this session plays
+        
         //load sound effect, and prepare to play it on check so it doesnt lag on intial button press.
         let path = Bundle.main.path(forResource: "spring.wav", ofType:nil)!
         let url = URL(fileURLWithPath: path)
